@@ -2,6 +2,7 @@ import React from 'react'
 import login from './Pic/login.jfif';
 import google from './Pic/google.webp';
 import facebook from './Pic/facebook1.png';
+import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <div>
@@ -54,14 +55,7 @@ const Login = () => {
   <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
   
   {/* Navigation List */}
-  <div>
-    <ul className="absolute top-0 right-0 flex flex-row gap-10 text-white p-9">
-      <li>Home</li>
-      <li>Store</li>
-      <li>Contact</li>
-      <li>Help</li>
-    </ul>
-  </div>
+  
   
   {/* Centered Text */}
   <div className='absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center'>
@@ -76,7 +70,14 @@ const Login = () => {
     </p>
   </div>
 </div>
-
+<div className="absolute top-0 right-0 flex flex-row gap-10 text-white p-9">
+  <ul className="flex space-x-8 text-white">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/login">Login</Link></li>
+      </ul>
+  </div>
 
 </div>
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import kivibg from './Pic/Pic.jfif';
-
+import { Link } from 'react-router-dom';
 const Contact = () => {
   return (
     <div>
@@ -11,25 +11,7 @@ const Contact = () => {
       {/* Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
-      {/* Navigation Section */}
-      <div className="absolute top-0 left-0 w-full p-8 text-white">
-        <div className="flex flex-row gap-8 justify-evenly">
-          <div>
-            <h1>Your Logo</h1>
-          </div>
-          <div className="ml-44">
-            <input type="search" placeholder="Search" className="border-white rounded-full px-4 py-1" />
-          </div>
-          <div>
-            <ul className="flex flex-row gap-10">
-              <li>Home</li>
-              <li>Store</li>
-              <li>Contact</li>
-              <li>Help</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Centered Contact Form */}
       <div className="absolute inset-0 flex items-center justify-center mt-5">
@@ -59,6 +41,23 @@ const Contact = () => {
       </div>
 
     </div>
+    {/* Navigation Section */}
+    <div className="absolute top-0 left-0 w-full p-8 text-white">
+        <div className="flex flex-row gap-8 justify-evenly">
+          <div>
+            <h1>Your Logo</h1>
+          </div>
+          <div className="ml-44">
+            <input type="search" placeholder="Search" className="border-white rounded-full px-4 py-1" />
+          </div>
+          <div className="flex flex-row gap-10">
+            <Link to="/"><span>Home</span></Link>
+            <Link to="/contact"><span>Contact</span></Link>
+            <Link to="/about"><span>About</span></Link>
+            <Link to="/login"><span>Login</span></Link>
+          </div>
+        </div>
+      </div>
           
 <div className="w-full">
   {/* Centered background div */}

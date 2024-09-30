@@ -39,33 +39,19 @@ import vegbag from './Pic/50.jfif';
 import tomato from './Pic/51.jfif';
 import cooking from './Pic/52.jfif';
 import wine from './Pic/53.jfif';
+import { Link } from 'react-router-dom';
+
 const Home = () => {
   return (
     <div>
     <div className="relative">
     <img src={bgimg} alt="" className="object-cover w-full h-full" />
+
     <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
     <div className="absolute inset-10 left-20 right-20">
     <img src={mainimg} alt="" className="object-cover w-full h-auto max-h-[190vh] rounded-lg" />
     </div>
-    <div className="absolute text-white left-24 inset-16">
-      <div className="flex flex-row gap-8 justify-evenly">
-        <div>
-          <h1>Your Logo</h1>
-        </div>
-        <div className="ml-44">
-          <input type="search" placeholder="Search" className="border-white rounded-full" />
-        </div>
-        <div>
-          <ul className="flex flex-row gap-10">
-            <li>Home</li>
-            <li>Store</li>
-            <li>Contact</li>
-            <li>Help</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    
   
     <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
       <div className="text-center">
@@ -88,6 +74,22 @@ const Home = () => {
       </button>
     </div>
     </div>
+    <div className="absolute text-white left-24 inset-16">
+      <div className="flex flex-row gap-8 justify-evenly">
+        <div>
+          <h1>Your Logo</h1>
+        </div>
+        <div className="ml-44">
+          <input type="search" placeholder="Search" className="border-white rounded-full" />
+        </div>
+        <div className="flex flex-row gap-10">
+            <Link to="/"><span>Home</span></Link>
+            <Link to="/contact"><span>Contact</span></Link>
+            <Link to="/about"><span>About</span></Link>
+            <Link to="/login"><span>Login</span></Link>
+          </div>
+      </div>
+    </div>
     
     <div className='relative'>
   <img src={bgimg2} className="object-cover w-full h-auto" alt="background" />
@@ -109,50 +111,50 @@ const Home = () => {
               <h3 class="text-lg font-bold text-white text-left">Full Creame Milk</h3>
               <h4 class="text-xl text-white font-bold mt-3 text-left">1500ml</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
         {/* Repeat similar structure for other products */}
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div clasNames="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={feed}  alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Dog Feed</h3>
-              <h4 class="text-xl text-white font-bold mt-3 text-left">1500g</h4>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Dog Feed</h3>
+              <h4 className="text-xl text-white font-bold mt-3 text-left">1500g</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
         {/* More products here... */}
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={jam}  alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">jam</h3>
-              <h4 class="text-xl text-white font-bold mt-3 text-left">100ml</h4>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">jam</h3>
+              <h4 className="text-xl text-white font-bold mt-3 text-left">100ml</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={leg}  alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Derm Sticks</h3>
-              <h4 class="text-xl text-white font-bold mt-3 text-left">1000g</h4>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Derm Sticks</h3>
+              <h4 className="text-xl text-white font-bold mt-3 text-left">1000g</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
       </div>
@@ -192,56 +194,56 @@ const Home = () => {
       <h2 className="text-4xl font-extrabold text-black mb-16 text-left">Top Seller</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         
-      <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+      <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={carret} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Carret</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Carret</h3>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
         {/* Repeat similar structure for other products */}
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={cucumber} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Calabash</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Calabash</h3>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
         {/* More products here... */}
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={kale} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Kale</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Kale</h3>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={cabbage} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Cabbage</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Cabbage</h3>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
       </div>
@@ -285,60 +287,60 @@ const Home = () => {
       <h2 className="text-4xl font-extrabold text-black mb-16 text-left">Top Seller</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         
-      <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+      <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={cocacola} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Coca Cola Drink</h3>
-              <h4 class="text-xl text-white font-bold mt-3 text-left">1.5liter</h4>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Coca Cola Drink</h3>
+              <h4 className="text-xl text-white font-bold mt-3 text-left">1.5liter</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
         {/* Repeat similar structure for other products */}
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={sprite} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Sprite Drink</h3>
-              <h4 class="text-xl text-white font-bold mt-3 text-left">1.5liter</h4>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Sprite Drink</h3>
+              <h4 className="text-xl text-white font-bold mt-3 text-left">1.5liter</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
         {/* More products here... */}
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={fanta} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Fanta Drink</h3>
-              <h4 class="text-xl text-white font-bold mt-3 text-left">1.5liter</h4>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Fanta Drink</h3>
+              <h4 className="text-xl text-white font-bold mt-3 text-left">1.5liter</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={sting} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Sting Drink</h3>
-              <h4 class="text-xl text-white font-bold mt-3 text-left">120ml</h4>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Sting Drink</h3>
+              <h4 className="text-xl text-white font-bold mt-3 text-left">120ml</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
       </div>
@@ -426,60 +428,60 @@ const Home = () => {
       <h2 className="text-4xl font-extrabold text-black mb-16 text-left">Top Seller</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         
-      <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+      <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={banana} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Banana</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Banana</h3>
               
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
         {/* Repeat similar structure for other products */}
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={peach} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Peach</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Peach</h3>
               
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
         {/* More products here... */}
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={mango} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Mango</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Mango</h3>
               
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={orange} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Orange</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Orange</h3>
               
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
       </div>
@@ -568,97 +570,97 @@ const Home = () => {
     <div className="font-sans p-4 mx-auto xl:max-w-7xl lg:max-w-5xl md:max-w-3xl max-w-md text-center">
       <h2 className="text-4xl font-extrabold text-black mb-16 text-left">Top Seller</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+      <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={oil} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Cooking Oil</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Cooking Oil</h3>
             
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
         {/* Repeat similar structure for other products */}
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={pasta} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Pasta</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Pasta</h3>
               
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
         {/* More products here... */}
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={aata} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Aata</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Aata</h3>
           
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
-        <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
-            <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+        <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
+          <div className="bg-green-950 flex flex-col h-full">
+            <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={milkbox} alt="food3"
-                class="h-full w-full object-cover p-6" />
+                className="h-full w-full object-cover p-6" />
             </div>
-            <div class="p-6 text-center flex-1">
-              <h3 class="text-lg font-bold text-white text-left">Milk Pack</h3>
+            <div className="p-6 text-center flex-1">
+              <h3 className="text-lg font-bold text-white text-left">Milk Pack</h3>
           
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" class="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-green-950 py-10 m-20 absolute -mt-[200vh] rounded-3xl">
-    <div class="grid gap-2 py-5 pl-5">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-green-950 py-10 m-20 absolute -mt-[200vh] rounded-3xl">
+    <div className="grid gap-2 py-5 pl-5">
         <div>
-            <img class="w-full h-full object-cover rounded-xl" src={pineapple} alt="Pineapple"/>
+            <img className="w-full h-full object-cover rounded-xl" src={pineapple} alt="Pineapple"/>
         </div>
         <div>
-            <img class="w-full h-full object-cover rounded-xl" src={pineslice} alt="Pineapple Slice"/>
-        </div>
-    </div>
-    <div class="grid gap-2 py-5">
-        <div>
-            <img class="w-full h-full object-cover rounded-xl" src={vegbag} alt="Vegetable Bag"/>
-        </div>
-        <div>
-            <img class="w-full h-72 object-cover rounded-xl" src={mix} alt="Mixed Vegetables"/>
+            <img className="w-full h-full object-cover rounded-xl" src={pineslice} alt="Pineapple Slice"/>
         </div>
     </div>
-    <div class="grid gap-2 py-5">
+    <div className="grid gap-2 py-5">
         <div>
-            <img class="w-full h-full object-cover rounded-xl" src={tomato} alt="Tomato"/>
+            <img className="w-full h-full object-cover rounded-xl" src={vegbag} alt="Vegetable Bag"/>
         </div>
         <div>
-            <img class="w-full h-full object-cover rounded-xl" src={cooking} alt="Cooking"/>
+            <img className="w-full h-72 object-cover rounded-xl" src={mix} alt="Mixed Vegetables"/>
         </div>
     </div>
-    <div class="grid gap-2 py-5 pr-5">
+    <div className="grid gap-2 py-5">
         <div>
-            <img class="w-full h-42 object-cover rounded-xl" src={wine} alt="Wine"/>
+            <img className="w-full h-full object-cover rounded-xl" src={tomato} alt="Tomato"/>
         </div>
         <div>
-            <img class="w-full h-64 object-cover rounded-xl" src={jam} alt="Jam"/>
+            <img className="w-full h-full object-cover rounded-xl" src={cooking} alt="Cooking"/>
+        </div>
+    </div>
+    <div className="grid gap-2 py-5 pr-5">
+        <div>
+            <img className="w-full h-42 object-cover rounded-xl" src={wine} alt="Wine"/>
+        </div>
+        <div>
+            <img className="w-full h-64 object-cover rounded-xl" src={jam} alt="Jam"/>
         </div>
     </div>
 </div>

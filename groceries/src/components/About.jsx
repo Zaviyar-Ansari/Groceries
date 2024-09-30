@@ -7,7 +7,7 @@ import main3 from './Pic/main3.jfif';
 import basket from './Pic/basket.jfif';
 import vegi from './Pic/vegi.jfif';
 import grapes from './Pic/grapes.jfif';
-
+import { Link } from 'react-router-dom';
 const About = () => {
   return (
     <div>
@@ -56,10 +56,10 @@ VoIP phone calls, for free over .
       <h1 className="text-white font-bold">Your Logo</h1>
       <input type="text" placeholder="Search" className="rounded-full px-4 mr-8 py-1" />
       <ul className="flex space-x-8 text-white">
-        <li>Home</li>
-        <li>Store</li>
-        <li>About Us</li>
-        <li>Help</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/login">Login</Link></li>
       </ul>
     </div>
   </div>
