@@ -8,6 +8,8 @@ import basket from './Pic/basket.jfif';
 import vegi from './Pic/vegi.jfif';
 import grapes from './Pic/grapes.jfif';
 import { Link } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 const About = () => {
   return (
     <div>
@@ -56,10 +58,11 @@ VoIP phone calls, for free over .
       <h1 className="text-white font-bold">Your Logo</h1>
       <input type="text" placeholder="Search" className="rounded-full px-4 mr-8 py-1" />
       <ul className="flex space-x-8 text-white">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        <li className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'><Link to="/">Home</Link></li>
+        <li className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'><Link to="/contact">Contact</Link></li>
+        <li className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'><Link to="/about">About</Link></li>
+        <li className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'><Link to="/login">Login</Link></li>
+        <Link to="/product"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase '>Product</span></Link>
       </ul>
     </div>
   </div>

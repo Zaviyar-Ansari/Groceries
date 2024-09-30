@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
 import Login from './components/Login';
+import Product from './components/Product';
 
 
 const App = () => {
@@ -11,9 +12,10 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/login" element={<Login />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
     </Router>
   );

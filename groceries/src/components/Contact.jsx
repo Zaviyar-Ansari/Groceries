@@ -1,6 +1,8 @@
 import React from 'react'
 import kivibg from './Pic/Pic.jfif';
 import { Link } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 const Contact = () => {
   return (
     <div>
@@ -33,7 +35,7 @@ const Contact = () => {
           <label htmlFor="message" className="mb-2">Message</label>
           <textarea id="message" placeholder="Enter Your Message" className="mb-6 p-2 text-black rounded-md bg-white opacity-25" />
 
-          <button className="text-yellow-600 border-2 border-yellow-600 rounded-full text-2xl px-10 py-3 bg-transparent hover:bg-yellow-600 hover:text-black">
+          <button className="text-yellow-200 border-2 border-yellow-200 rounded-full text-2xl px-10 py-3 bg-transparent hover:bg-yellow-600 hover:text-black">
             Submit
           </button>
         
@@ -42,19 +44,17 @@ const Contact = () => {
 
     </div>
     {/* Navigation Section */}
+    <div className='text-xl font-semibold absolute top-0 left-0 w-full p-8 text-white -mt-2'>
+            <h1 className='text-2xl'>Your Logo</h1>
+          </div>
     <div className="absolute top-0 left-0 w-full p-8 text-white">
-        <div className="flex flex-row gap-8 justify-evenly">
-          <div>
-            <h1>Your Logo</h1>
-          </div>
-          <div className="ml-44">
-            <input type="search" placeholder="Search" className="border-white rounded-full px-4 py-1" />
-          </div>
+        <div className="flex flex-row gap-8  justify-center">
           <div className="flex flex-row gap-10">
-            <Link to="/"><span>Home</span></Link>
-            <Link to="/contact"><span>Contact</span></Link>
-            <Link to="/about"><span>About</span></Link>
-            <Link to="/login"><span>Login</span></Link>
+            <Link to="/"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'>Home</span></Link>
+            <Link to="/contact"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'>Contact</span></Link>
+            <Link to="/about"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'>About</span></Link>
+            <Link to="/login"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'>Login</span></Link>
+            <Link to="/product"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase '>Product</span></Link>
           </div>
         </div>
       </div>

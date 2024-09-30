@@ -40,6 +40,8 @@ import tomato from './Pic/51.jfif';
 import cooking from './Pic/52.jfif';
 import wine from './Pic/53.jfif';
 import { Link } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const Home = () => {
   return (
@@ -80,13 +82,15 @@ const Home = () => {
           <h1>Your Logo</h1>
         </div>
         <div className="ml-44">
-          <input type="search" placeholder="Search" className="border-white rounded-full" />
+          <input type="search" placeholder="Search" className="border-white rounded-full pl-2" />
         </div>
         <div className="flex flex-row gap-10">
-            <Link to="/"><span>Home</span></Link>
-            <Link to="/contact"><span>Contact</span></Link>
-            <Link to="/about"><span>About</span></Link>
-            <Link to="/login"><span>Login</span></Link>
+            <Link to="/"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'>Home</span></Link>
+            <Link to="/contact"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'>Contact</span></Link>
+            <Link to="/about"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'>About</span></Link>
+            <Link to="/login"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase '>Login</span></Link>
+            <Link to="/product"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase '>Product</span></Link>
+
           </div>
       </div>
     </div>
@@ -102,7 +106,7 @@ const Home = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         
       <div class="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div class="bg-green-950 flex flex-col h-full">
+          <div class="bg-green-950 flex flex-col h-auto">
             <div class="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={milk} alt="food3"
                 class="h-full w-full object-cover p-6" />
@@ -111,27 +115,27 @@ const Home = () => {
               <h3 class="text-lg font-bold text-white text-left">Full Creame Milk</h3>
               <h4 class="text-xl text-white font-bold mt-3 text-left">1500ml</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
         {/* Repeat similar structure for other products */}
         <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div className="bg-green-950 flex flex-col h-full">
+          <div className="bg-green-950 flex flex-col h-auto">
             <div clasNames="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={feed}  alt="food3"
-                className="h-full w-full object-cover p-6" />
+                className="h-[41vh] w-full object-cover p-6" />
             </div>
             <div className="p-6 text-center flex-1">
               <h3 className="text-lg font-bold text-white text-left">Dog Feed</h3>
               <h4 className="text-xl text-white font-bold mt-3 text-left">1500g</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
         {/* More products here... */}
         <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div className="bg-green-950 flex flex-col h-full">
+          <div className="bg-green-950 flex flex-col h-auto">
             <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={jam}  alt="food3"
                 className="h-full w-full object-cover p-6" />
@@ -140,12 +144,12 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">jam</h3>
               <h4 className="text-xl text-white font-bold mt-3 text-left">100ml</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
         <div className="bg-green-950p-2 overflow-hidden cursor-pointer rounded-3xl">
-          <div className="bg-green-950 flex flex-col h-full">
+          <div className="bg-green-950 flex flex-col h-auto">
             <div className="w-full h-[250px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
               <img src={leg}  alt="food3"
                 className="h-full w-full object-cover p-6" />
@@ -154,7 +158,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Derm Sticks</h3>
               <h4 className="text-xl text-white font-bold mt-3 text-left">1000g</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
       </div>
@@ -186,7 +190,6 @@ const Home = () => {
       </p>
     </div>
   </div>
-  
 </div>
 {/* Centering the product list */}
 <div className="absolute mt-44 inset-0 flex justify-center items-center">
@@ -203,7 +206,7 @@ const Home = () => {
             <div className="p-6 text-center flex-1">
               <h3 className="text-lg font-bold text-white text-left">Carret</h3>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
@@ -217,7 +220,7 @@ const Home = () => {
             <div className="p-6 text-center flex-1">
               <h3 className="text-lg font-bold text-white text-left">Calabash</h3>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
         {/* More products here... */}
@@ -230,7 +233,7 @@ const Home = () => {
             <div className="p-6 text-center flex-1">
               <h3 className="text-lg font-bold text-white text-left">Kale</h3>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
@@ -243,7 +246,7 @@ const Home = () => {
             <div className="p-6 text-center flex-1">
               <h3 className="text-lg font-bold text-white text-left">Cabbage</h3>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
       </div>
@@ -269,7 +272,7 @@ const Home = () => {
     <h1 className="text-4xl font-bold mb-4">Coca Cola</h1>
     <span className="text-xl font-semibold mb-2">1 litre</span>
     <p className="text-lg mb-6">“On a recent test run of all three services."</p>
-    <button className="bg-green-950 border-orange-500 border-2 border-separate text-white font-semibold py-2 px-4 rounded-lg">
+    <button className="bg-green-950 border-yellow-200 border-2 border-separate text-white font-semibold py-2 px-4 rounded-lg">
         Add to Cart
     </button>
 </div>
@@ -297,7 +300,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Coca Cola Drink</h3>
               <h4 className="text-xl text-white font-bold mt-3 text-left">1.5liter</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
@@ -312,7 +315,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Sprite Drink</h3>
               <h4 className="text-xl text-white font-bold mt-3 text-left">1.5liter</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
         {/* More products here... */}
@@ -326,7 +329,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Fanta Drink</h3>
               <h4 className="text-xl text-white font-bold mt-3 text-left">1.5liter</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
@@ -340,7 +343,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Sting Drink</h3>
               <h4 className="text-xl text-white font-bold mt-3 text-left">120ml</h4>
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
       </div>
@@ -438,7 +441,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Banana</h3>
               
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
@@ -453,7 +456,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Peach</h3>
               
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
         {/* More products here... */}
@@ -467,7 +470,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Mango</h3>
               
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
@@ -481,7 +484,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Orange</h3>
               
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
       </div>
@@ -580,7 +583,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Cooking Oil</h3>
             
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
@@ -595,7 +598,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Pasta</h3>
               
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
         {/* More products here... */}
@@ -609,7 +612,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Aata</h3>
           
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
 
@@ -623,7 +626,7 @@ const Home = () => {
               <h3 className="text-lg font-bold text-white text-left">Milk Pack</h3>
           
               <p className='text-white text-left'>“On a recent test run of all three services</p>
-              <button type="button" className="bg-green-950 border-orange-500 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
+              <button type="button" className="bg-green-950 border-yellow-200 border-2 border-separate font-semibold rounded-3xl text-white text-sm px-2 py-2.5 w-full">Add to Cart</button>            </div>
           </div>
         </div>
       </div>

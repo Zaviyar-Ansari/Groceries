@@ -3,6 +3,8 @@ import login from './Pic/login.jfif';
 import google from './Pic/google.webp';
 import facebook from './Pic/facebook1.png';
 import { Link } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 const Login = () => {
   return (
     <div>
@@ -17,13 +19,14 @@ const Login = () => {
 </div>
 
 
-            {/* Text Section */}
-            <div className='w-1/2 flex flex-col justify-center items-center p-20 bg-slate-300'>
+  {/* Text Section */}
+  <div className='w-1/2 flex flex-col justify-center items-center p-20 bg-slate-300'>
   <h1 className='text-4xl text-center font-bold'>User Login</h1>
 
   {/* Social Media Icons */}
   <div className='flex flex-row justify-center space-x-4 mt-6'>
     <img src={google} alt="Google" className='w-8 h-8 mt-4' />
+    <h1 className='mt-7'>or</h1>
     <img src={facebook} alt="Facebook" className='w-16 h-16' />
   </div>
 
@@ -35,7 +38,7 @@ const Login = () => {
     <label htmlFor="password" className='mt-4'>Password</label>
     <input type="password" id="password" placeholder='Enter your Password' className='rounded-2xl p-2 bg-white' />
     
-    <button className="mt-6 text-black bg-slate-300 border-2 border-yellow-600 text-2xl px-1 py-1 bg-transparent">
+    <button className="mt-6 text-black bg-slate-300 border-2 border-yellow-200 text-2xl px-1 py-1 bg-transparent">
       Login Now
     </button>
   </div>
@@ -48,11 +51,11 @@ const Login = () => {
 </div>
 
   {/* Image Section */}
-  <div className='w-1/2 relative'>
-  <img src={login} alt="Basket" className='w-full h-full object-cover' />
+  <div className='w-1/2 relative  bg-slate-300 '>
+  <img src={login} alt="Basket" className='w-full h-full object-cover rounded-tl-[60vh]' />
   
   {/* Overlay */}
-  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-tl-[60vh]"></div>
   
   {/* Navigation List */}
   
@@ -72,10 +75,11 @@ const Login = () => {
 </div>
 <div className="absolute top-0 right-0 flex flex-row gap-10 text-white p-9">
   <ul className="flex space-x-8 text-white">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        <li className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'><Link to="/">Home</Link></li>
+        <li className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'><Link to="/contact">Contact</Link></li>
+        <li className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'><Link to="/about">About</Link></li>
+        <li className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase'><Link to="/login">Login</Link></li>
+        <Link to="/product"><span className='active hover:underline underline-offset-2 hover:text-yellow-200 capitalize hover:uppercase '>Product</span></Link>
       </ul>
   </div>
 
